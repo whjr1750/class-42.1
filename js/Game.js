@@ -123,7 +123,7 @@ class Game {
   play() {
     this.handleElements();
     this.handleResetButton();
-    this.handleObstacleCollision(index);
+    
 
     Player.getPlayersInfo();
     player.getCarsAtEnd();
@@ -155,7 +155,7 @@ class Game {
 
           this.handleFuel(index);
           this.handlePowerCoins(index);
-
+          this.handleObstacleCollision(index);
           // Changing camera position in y direction
           camera.position.y = cars[index - 1].position.y;
         }
@@ -311,8 +311,7 @@ class Game {
 
 
   handleObstacleCollision(index) {
-    console.log(cars)
-    console.log(obstacles)
+
     if (cars[index - 1].collide(obstacles)) {
      //Reducing Player Life
      if (player.life > 0) {
