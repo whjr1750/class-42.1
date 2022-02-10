@@ -155,7 +155,7 @@ class Game {
 
           this.handleFuel(index);
           this.handlePowerCoins(index);
-          this.handleObstacleCollision(index);
+          this.handleObstacleCollision(index); //moved the function here to resolve collide issue as index was going undefined
           // Changing camera position in y direction
           camera.position.y = cars[index - 1].position.y;
         }
